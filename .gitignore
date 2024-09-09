@@ -1,0 +1,5 @@
+#node_modules folder를 ignore
+node_modules/
+
+#.env 파일을 Ignore
+.env
