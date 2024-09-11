@@ -46,8 +46,10 @@ app.post('/api/payment', async(req, res) =>  {
 
     //PortOne 결제 내역 검증 
     //imp_uid를 바탕으로 결제 내역을 조회
-    const paymentData = await iamport.payment.getByImpUid({ imp_uid });
-
+    console.log(imp_uid);
+    const paymentData = await iamport.payment.getByImpUid({imp_uid});
+    console.log(paymentData);
+    
     //결제 상태 확인
     if (paymentData.status !== 'paid') {
       return res.status(400).json({ success: false, message: '결제가 완료되지 않았습니다.' });

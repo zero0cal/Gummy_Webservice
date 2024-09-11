@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const clientSchema = new mongoose.Schema({
   storeName: { type: String, required: true },
   roadAddress: { type: String, required: true },
-  phoneNumber: { type: String, required: true },
+  phoneNumber: { type: String, required: false },
   paymentInfo: {
     amount: { type: Number, required: true },  // 결제 금액
     paymentMethod: { type: String, required: true },  // 결제 방식
